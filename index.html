@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Undangan Pernikahan Harir & Tika</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Musik Latar -->
+  <audio id="bg-music" loop>
+    <source src="a-thousand-year.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Halaman Sampul (Hero) -->
+  <section class="hero">
+    <div class="header-text">
+      <p class="subtitle">THE WEDDING OF</p>
+      <h1 class="title">Harir & Tika</h1>
+    </div>
+
+    <div class="footer-text">
+      <p class="date">14.11.2026</p>
+      <button id="tombol-buka" class="btn-open">
+        <i class="fa-solid fa-envelope-open"></i> Buka Undangan
+      </button>
+    </div>
+  </section>
+
+  <!-- KONTEN UTAMA -->
+  <div id="konten-utama" class="hidden">
+    
+    <section class="quote-section" data-aos="fade-up">
+      <div class="card-quote">
+        <p>"Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu istri-istri dari jenismu sendiri..."</p>
+        <span>(Ar-Rum: 21)</span>
+      </div>
+    </section>
+
+    <section class="mempelai-section">
+      <h2 data-aos="fade-up">Kedua Mempelai</h2>
+      <div class="mempelai-container">
+        <div class="mempelai-card" data-aos="fade-right">
+          <div class="img-box">
+            <img src="men.jpeg" alt="Muhammad Harir Faqih">
+          </div>
+          <h3>Muhammad Harir Faqih</h3>
+          <p>Putra dari Bapak M. Fathurrohman & Ibu Istiqomah</p>
+        </div>
+        <div class="mempelai-card" data-aos="fade-left">
+          <div class="img-box">
+            <img src="tikaw.jpeg" alt="Rini Sartika">
+          </div>
+          <h3>Rini Sartika</h3>
+          <p>Putri dari Bapak Agus Supriyanto & Ibu Siti Zaenap</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="acara-section" data-aos="fade-up">
+      <h2>Waktu & Tempat</h2>
+      <div class="acara-container">
+        <div class="acara-card">
+          <h3>Resepsi</h3>
+          <p><i class="fa-regular fa-calendar"></i> Sabtu, 14 November 2026</p>
+          <p><i class="fa-solid fa-location-dot"></i> Rumah Mempelai Pria</p>
+          <p><i class="fa-solid fa-music"></i> Hiburan:</p>
+          <p style="margin-top: -5px; padding-left: 20px;">• Qosidah (Siang)</p>
+          <p style="margin-top: -5px; padding-left: 20px;">• Pengajian (Malam)</p>
+          <a href="https://maps.app.goo.gl/hwevt5pMzuEtm4tAA" target="_blank" class="btn-map">Lihat Lokasi</a>
+        </div>
+        <div class="acara-card">
+          <h3>Akad Nikah</h3>
+          <p><i class="fa-regular fa-calendar"></i> Senin, 16 November 2026</p>
+          <p><i class="fa-solid fa-location-dot"></i> Rumah Mempelai Wanita</p>
+          <a href="https://maps.app.goo.gl/izNkBb4scgbcWCy76" target="_blank" class="btn-map">Lihat Lokasi</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="countdown-section" data-aos="fade-up">
+      <h2>Menuju Hari Bahagia</h2>
+      <div id="countdown" class="countdown-container">
+        <div><span id="days">00</span><p>Hari</p></div>
+        <div><span id="hours">00</span><p>Jam</p></div>
+        <div><span id="minutes">00</span><p>Menit</p></div>
+        <div><span id="seconds">00</span><p>Detik</p></div>
+      </div>
+    </section>
+
+    <section class="galeri-section" data-aos="fade-up">
+      <h2>Galeri Kami</h2>
+      <p class="galeri-subtitle">Momen kebersamaan kami</p>
+      <div class="galeri-container">
+        <div class="galeri-item" data-aos="zoom-in">
+          <img src="harir.jpeg" alt="Galeri 1">
+        </div>
+        <div class="galeri-item" data-aos="zoom-in">
+          <img src="galeri1.jpeg" alt="Galeri 2">
+        </div>
+        <div class="galeri-item" data-aos="zoom-in">
+          <img src="Galeri3.jpeg" alt="Galeri 3">
+        </div>
+      </div>
+    </section>
+
+    <section class="rsvp-section" data-aos="fade-up">
+      <h2>Ucapan & Konfirmasi Kehadiran</h2>
+      <p class="rsvp-subtitle">Silakan berikan doa restu dan konfirmasi kehadiran Anda</p>
+      
+      <div class="form-container">
+        <form id="form-ucapan">
+          <div class="form-group">
+            <input type="text" id="input-nama" placeholder="Nama Anda" required>
+          </div>
+          <div class="form-group">
+            <select id="input-status" required>
+              <option value="" disabled selected>Konfirmasi Kehadiran</option>
+              <option value="Hadir">Hadir</option>
+              <option value="Tidak Hadir">Berhalangan Hadir</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <textarea id="input-pesan" placeholder="Tulis ucapan atau doa..." rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn-submit">Kirim Ucapan</button>
+        </form>
+      </div>
+
+      <div id="daftar-ucapan" class="ucapan-container"></div>
+    </section>
+
+  </div> 
+
+  <!-- Script Pendukung -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script type="module" src="script.js"></script>
+
+</body>
+</html>
